@@ -1,0 +1,16 @@
+# =======================================================
+# DOCKER-COMPOSE PARA UM ÚNICO SERVIÇO (APP COMPLETO)
+# =======================================================
+
+version: '3.8'
+
+services:
+  # Nosso único serviço, que contém tanto o frontend quanto o backend
+  app:
+    build: .  # Constrói a imagem usando o Dockerfile na pasta atual (raiz)
+    container_name: impulsai-app
+    ports:
+      - "3000:3000" # Mapeia a porta 3000 do seu PC para a porta 3000 do contêiner
+    env_file:
+      - ./.env    # Carrega as variáveis de ambiente do arquivo .env
+    restart: unless-stopped

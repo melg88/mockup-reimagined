@@ -1,0 +1,43 @@
+# ==========================================================
+# DOCKERFILE PARA PROJETO NODE.JS (FRONTEND + BACKEND)
+# ==========================================================
+
+# --- Estágio 1: Build Stage ---
+# Usamos uma imagem completa do Node para instalar dependências e buildar o frontend
+FROM node:20-alpine AS builder
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Copia os arquivos de definição de pacotes e instala TODAS as dependências (dev e prod)
+COPY package*.json ./
+RUN npm install
+
+# Copia o restante do código fonte
+COPY . .
+
+# Executa o build de produção do React/Vite, criando a pasta ./dist
+RUN npm run build
+
+
+# --- Estágio 2: Production Stage ---
+# Começamos com uma imagem limpa do Node para a versão final. É mais segura e menor.
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copia os arquivos de definição de pacotes novamente
+COPY package*.json ./
+
+# Instala SOMENTE as dependências de PRODUÇÃO. Isso torna a imagem final muito menor.
+RUN npm install --only=production
+
+# Copia o servidor e os arquivos estáticos buildados do estágio anterior
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/server.js ./server.js
+
+# Expõe a porta que o seu servidor usará. Lembre-se de usar process.env.PORT no seu server.js
+EXPOSE 3000
+
+# O comando final para iniciar seu servidor Node.js
+CMD [ "node", "server.js" ]
