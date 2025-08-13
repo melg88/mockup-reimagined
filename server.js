@@ -10,7 +10,12 @@ import externalAPIService from './services/externalAPIService.js';
 import axios from 'axios'; // axios is imported here for the new test endpoint
 
 const app = express();
+<<<<<<< HEAD
+// const port = 4000;
+const port = process.env.PORT || 3000; 
+=======
 const port = getSectionConfig('SERVER').PORT;
+>>>>>>> c43b4f1d052195e7a05d5be39626520da82609ff
 
 app.use(cors());
 app.use(express.json());

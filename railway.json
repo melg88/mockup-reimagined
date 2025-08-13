@@ -1,0 +1,27 @@
+{
+    "$schema": "https://railway.app/railway.schema.json",
+    "services": [
+      {
+        "name": "web",
+        "builder": "NIXPACKS",
+        "build": {
+          "command": "npm install && npm run build"
+        },
+        "deploy": {
+          "startCommand": "npm run server",
+          "healthcheckPath": "/",
+          "healthcheckTimeout": 120
+        }
+      },
+      {
+        "name": "api-python",
+        "builder": "NIXPACKS",
+        "build": {
+          "command": "pip install -r api/requirements.txt"
+        },
+        "deploy": {
+          "startCommand": "gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app"
+        }
+      }
+    ]
+  }

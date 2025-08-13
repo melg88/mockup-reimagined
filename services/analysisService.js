@@ -1,8 +1,13 @@
 import { parseCv } from './cvParser.js';
 import { loadCursos } from '../data/dataLoader.js';
+<<<<<<< HEAD
+import { jobDataService } from './jobDataService.js';
+import { extrairCompetencias, realizarAnalise } from './geminiClient.js';
+=======
 import { extrairCompetencias, realizarAnalise, gerarRoadmapEstrategico } from './geminiClient.js';
 import { buscarVagasJSearch, extrairCompetenciasVagas } from './jsearchService.js';
 import courseIntegrationService from './courseIntegrationService.js';
+>>>>>>> c43b4f1d052195e7a05d5be39626520da82609ff
 
 function extrairCompetenciasMaisComuns(vagas, cargoAlmejado, topN = 10) {
     console.log('🔍 Extraindo competências para cargo:', cargoAlmejado);
@@ -109,6 +114,11 @@ export async function gerarRoadmapCompleto(arquivoCV, cargoAlmejado) {
         const textoCV = await parseCv(arquivoCV);
         console.log('📄 Texto extraído do CV:', textoCV ? textoCV.substring(0, 200) + '...' : 'NULO');
 
+<<<<<<< HEAD
+        console.log('📂 Carregando dados de vagas...');
+        const vagas = await jobDataService.loadVagas();
+        console.log('✅ Vagas carregadas:', vagas.length);
+=======
         console.log('🔍 Buscando vagas reais via JSearch...');
         let vagas = [];
         let fonteDados = 'estática';
@@ -163,6 +173,7 @@ export async function gerarRoadmapCompleto(arquivoCV, cargoAlmejado) {
             competenciasMercado = extrairCompetenciasMaisComuns(vagasEstaticas, cargoAlmejado);
             console.log('✅ Competências do mercado (estáticas):', competenciasMercado);
         }
+>>>>>>> c43b4f1d052195e7a05d5be39626520da82609ff
 
         console.log('📂 Carregando dados de cursos...');
         const cursos = await loadCursos();
