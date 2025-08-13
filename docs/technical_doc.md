@@ -1,26 +1,25 @@
 # Título do Projeto: ImpulsAI
 
-> **Versão:** [1.0.0]  
-> **Data:** 10/08/2025<br>
+> **Versão:** [2.0.0]  
+> **Data:** 13/08/2025<br>
 > **Autor:** Ithalo Rannieri Araujo Soares
 
-## Índice
+## Sumário
 - [Visão Geral do Produto](#1-visão-geral-do-produto)
 - [Arquitetura do Sistema](#2-arquitetura-do-sistema)
 - [Detalhes Técnicos e de Implementação](#3-detalhes-técnicos-e-de-implementação)
 - [Deploy e Operação](#4-deploy-e-operação)
 
 ## 1\. Visão Geral do Produto
-
 O _ImpulsAI_ é uma solução de software como serviço (SaaS) projetada para transformar a forma como os profissionais se candidatam a vagas de emprego, aumentando significativamente suas chances de sucesso nas primeiras etapas de seleção através da customização das informações do seu currículo para que se adaptem a vaga almejada.
 
 ### O Problema
-
+---
 Candidatos frequentemente perdem oportunidades valiosas porque seus currículos não estão otimizados para a vaga específica. A triagem inicial, seja ela manual (por recrutadores) ou automatizada por **Applicant Tracking Systems** (ATS), pode descartar currículos com base em palavras-chave ausentes, formatação inadequada ou falta de alinhamento direto com os requisitos da posição. Isso gera frustração e diminui a eficácia dos esforços de candidatura.
 
 
 ### A Solução
-
+---
 O ImpulsAI resolve esse problema com um motor de agentes inteligentes que analisa a descrição da vaga e o currículo do usuário. A ferramenta democratiza o acesso a recursos avançados de inteligência artificial, eliminando a necessidade de os usuários saberem criar prompts complexos ou dominar o uso de LLMs (Large Language Models).
 
 Nossa solução atua como um intermediário inteligente e fácil de usar, gerando sugestões precisas para otimizar o documento. O objetivo é criar um currículo customizado para a vaga de forma simples e intuitiva.
@@ -28,9 +27,8 @@ Nossa solução atua como um intermediário inteligente e fácil de usar, gerand
 Como output, a plataforma não entrega apenas o currículo otimizado, mas também sugere cursos e trilhas de aprendizado (roadmaps) para que o candidato se prepare tecnicamente para os próximos passos. Além disso, a solução fornece um guia de preparação para entrevistas de fit cultural e técnico, garantindo que o usuário esteja totalmente preparado para as etapas de seleção.
 
 ### Análise de Competidores
-
+---
 #### Diferença em Relação a LLMs de Propósito Geral (Gemini, GPT, DeepSeeker)
-
 Essas ferramentas são poderosas, mas a principal barreira para o usuário é a necessidade de **conhecimento em *prompt engineering***. O ImpulsAI resolve esse problema de forma estratégica:
 
 * **Abstração da Complexidade:** O usuário não precisa saber como escrever um *prompt* eficiente para otimizar um currículo. A inteligência do ImpulsAI já faz isso de forma automatizada e especializada. O usuário simplesmente fornece os dois artefatos (currículo e vaga) e recebe um resultado direcionado.
@@ -43,7 +41,6 @@ Essas ferramentas são poderosas, mas a principal barreira para o usuário é a 
 Um LLM genérico precisaria de múltiplos *prompts* e de um esforço considerável do usuário para chegar a um resultado similar, com uma qualidade e estruturação que seriam difíceis de replicar.
 
 #### Diferença em Relação a Ferramentas de Formatação (Zety, My Perfect Resume, CurriculumYa)
-
 Estas ferramentas são especializadas, mas seu valor primário está na **formatação e na criação de templates**. Elas ajudam o usuário a construir um currículo visualmente atraente, mas não oferecem a inteligência contextual para adaptá-lo a uma vaga específica.
 
 * **Inteligência de Conteúdo vs. Design:** O ImpulsAI foca no **conteúdo e na substância do currículo**, enquanto essas ferramentas se concentram na estética e na forma. A proposta do ImpulsAI é complementar, otimizando o conteúdo de um currículo que já pode ter sido criado em uma dessas plataformas.
@@ -51,13 +48,12 @@ Estas ferramentas são especializadas, mas seu valor primário está na **format
 * **Solução de Preparação Completa:** O ImpulsAI não é apenas uma ferramenta de currículos. Ele se posiciona como um parceiro de carreira, fornecendo recursos para as etapas subsequentes à candidatura, como a preparação para entrevistas e o planejamento de desenvolvimento profissional.
 
 #### Por que um Usuário Deve Utilizar o ImpulsAI?
-
 Um usuário deve escolher o ImpulsAI porque ele é a **solução completa e inteligente** para o desafio da triagem. Ele combina o poder da IA, que seria inacessível para a maioria dos usuários, em uma interface simples e especializada.
 
 O ImpulsAI poupa o usuário da curva de aprendizado de um LLM genérico e entrega muito mais valor do que as ferramentas de formatação, ao fornecer **inteligência de conteúdo, preparação para entrevistas e um plano de desenvolvimento profissional**, tudo em um único lugar. O resultado é um aumento real na eficácia das candidaturas e na confiança do candidato.
 
 ### Público-Alvo
-
+---
 O ImpulsAI é destinado a profissionais que buscam ativamente uma nova colocação e desejam aumentar suas chances de sucesso, independente de sua senioridade e momento de carreira. Isso inclui:
 
 * **Profissionais em transição de carreira:** Pessoas que precisam adaptar seus currículos para novas áreas.
@@ -65,7 +61,7 @@ O ImpulsAI é destinado a profissionais que buscam ativamente uma nova colocaç�
 * **Profissionais experientes:** Candidatos que buscam uma otimização estratégica para cargos específicos.
 
 ### Personas
-
+---
 * **Persona 1:** João, 23 anos, recém-formado em Engenharia da Computação
   * **Contexto:** João acabou de se formar e está na sua primeira busca por emprego. Ele tem um bom conhecimento técnico, mas pouca experiência prática para colocar no currículo. Ele já usou LLMs (Large Language Models) como o Gemini para algumas tarefas, mas não sabe como criar prompts eficazes para otimizar seu currículo para as vagas.
   * **Necessidades:** Precisa de uma ferramenta que o ajude a traduzir suas habilidades e projetos acadêmicos para uma linguagem que os recrutadores e ATS (Applicant Tracking Systems) entendam. Busca orientação sobre como se preparar para sua primeira entrevista técnica e cultural.
@@ -75,18 +71,16 @@ O ImpulsAI é destinado a profissionais que buscam ativamente uma nova colocaç�
   * **Necessidades:** Uma solução que a ajude a identificar e destacar suas habilidades relevantes para a nova área. Precisa de um roadmap de aprendizado para preencher as lacunas técnicas e se sentir mais confiante nas entrevistas.
 
 * **Persona 3:** Carlos, 45 anos, Administrador de Empresas
-  * **Contexto:** Carlos tem mais de 20 anos de experiência em gestão e está em busca de um cargo de liderança sênior. Seu desafio não é a falta de experiência, mas sim a necessidade de customizar seu vasto currículo para vagas muito específicas. Ele precisa de uma ferramenta que o ajude a focar em conquistas relevantes e a cortar o excesso de informação que pode ser irrelevante para a vaga atual. Ele é cético em relação a IA e busca uma ferramenta que seja precisa e confiável.
+  * **Contexto:** Carlos tem mais de 20 anos de experiência em gestão de empresas e está em busca de um cargo de liderança sênior. Seu desafio não é a falta de experiência, mas sim a necessidade de customizar seu vasto currículo para vagas muito específicas. Ele precisa de uma ferramenta que o ajude a focar em conquistas relevantes e a cortar o excesso de informação que pode ser irrelevante para a vaga atual. Ele é cético em relação a IA e busca uma ferramenta que seja precisa e confiável.
   * **Necessidades:** Sugestões precisas e estratégicas para otimizar seu currículo. Ele valoriza a velocidade e a relevância das sugestões, e espera que a ferramenta seja capaz de interpretar nuances em descrições de vagas de alto nível.
 
 ### 1.1. Objetivos do Projeto
-
+---
 #### 1.1.1. Objetivos de Negócio
-
 * Se tornar a ferramenta de referência para otimização de currículos, oferecendo um serviço que gere valor real para os usuários.
 * Construir uma comunidade de usuários ativos e engajados, promovendo melhorias contínuas.
 
 #### 1.1.2. Objetivos Técnicos
-
 * Desenvolver agentes inteligentes com alta precisão na análise de vagas e currículos.
 * Criar uma interface de usuário (UI) intuitiva e uma experiência de usuário (UX) fluida.
 * Garantir a segurança e privacidade dos dados dos usuários, que incluem informações sensíveis.
@@ -94,11 +88,10 @@ O ImpulsAI é destinado a profissionais que buscam ativamente uma nova colocaç�
 
 
 ### 1.2. Escopo
-
+---
 Esta sessão define os limites e as funcionalidades da versão inicial do ImpulsAI. O objetivo é garantir que o foco do desenvolvimento esteja nas entregas mais importantes, gerenciando as expectativas dos usuários e da equipe sobre o que está e o que não está incluído.
 
 #### 1.2.1. Funcionalidades Incluídas (In Scope)
-
 As seguintes funcionalidades serão implementadas e entregues como parte da versão atual do ImpulsAI:
 
 * **Otimização de Currículos**:
@@ -120,7 +113,6 @@ As seguintes funcionalidades serão implementadas e entregues como parte da vers
     * Garantia de segurança e privacidade através do armazenamento criptografado dos dados do usuário.
 
 #### 1.2.2. Funcionalidades Excluídas (Out of Scope)
-
 As seguintes funcionalidades não serão desenvolvidas nesta versão, mas podem ser consideradas para o futuro do projeto:
 
 * **Criação de Currículo do Zero**: O projeto se concentrará exclusivamente na otimização de currículos já existentes, e não na sua criação a partir de formulários.
@@ -132,13 +124,11 @@ As seguintes funcionalidades não serão desenvolvidas nesta versão, mas podem 
 
 
 ### 1.3. Requisitos e Qualidade
-
 Esta seção detalha a estratégia de requisitos e garantia de qualidade do projeto. A metodologia adotada é o **Behavior-Driven Development (BDD)**, com os requisitos funcionais e não-funcionais (RNF) sendo documentados na forma de _User Stories_.
 
 Essa abordagem garante que o desenvolvimento seja centrado no valor para o usuário final, promovendo uma linguagem comum e alinhamento entre as equipes de produto, desenvolvimento e testes. A estratégia estabelece uma conexão direta entre as User Stories e os cenários de teste, assegurando um processo de validação robusto e a entrega de um produto de alta qualidade, alinhado às necessidades do usuário.
 
 #### 1.3.1. User Stories
-
 #### **User Story 01: Upload e Análise de Documentos**
 
 **Como um candidato a uma vaga**, eu quero fazer o upload do meu currículo e da descrição da vaga, para que a IA possa analisar meu perfil e as exigências da posição.
@@ -190,11 +180,9 @@ Essa abordagem garante que o desenvolvimento seja centrado no valor para o usuá
 * **Dado** que eu navego pela aplicação, **Então** o design e os elementos interativos devem seguir padrões de acessibilidade para garantir que a plataforma seja fácil de usar para todos (**RNF8**).
 
 #### 1.3.2. Plano de Qualidade
-
 O objetivo deste plano é guiar o processo de verificação e validação do software ImpulsAI, garantindo que o produto final seja de alta qualidade, confiável, seguro e usável. Ele serve como referência para a execução de testes e a aprovação final do sistema, confirmando que cada User Story e seus respectivos critérios de aceitação foram plenamente atendidos. A abordagem central é o **Behavior-Driven Development (BDD)**, que alinha a validação técnica com o valor de negócio percebido pelo usuário.
 
 #### Escopo do Teste
-
 O escopo do teste abrange todas as funcionalidades e comportamentos descritos nas User Stories e seus Critérios de Aceitação.
 
 * **Incluso**:
@@ -207,7 +195,6 @@ O escopo do teste abrange todas as funcionalidades e comportamentos descritos na
     * Testes de compatibilidade com versões de navegadores ou sistemas operacionais legados.
 
 #### Estratégia de Testes
-
 A estratégia de testes será guiada pela metodologia BDD, utilizando os Critérios de Aceitação de cada User Story como a base para a criação dos cenários de teste em linguagem Gherkin.
 
 1.  **Testes Funcionais**: Cada User Story será validada por meio de testes que simulam o comportamento do usuário. Serão utilizados dados válidos e inválidos para garantir a robustez das funcionalidades.
@@ -216,7 +203,6 @@ A estratégia de testes será guiada pela metodologia BDD, utilizando os Critér
 4.  **Testes de Usabilidade e Acessibilidade**: Serão conduzidos testes exploratórios em dispositivos móveis e desktops, juntamente com a validação do feedback do sistema e a aderência a padrões de acessibilidade (ex: **RNF6**, **RNF7** e **RNF8**).
 
 #### Matriz de Rastreabilidade
-
 A matriz a seguir demonstra a rastreabilidade entre as User Stories, os Critérios de Aceitação e os Casos de Teste (Cenários BDD).
 
 | User Story | Critério de Aceitação | Cenário BDD Relacionado |
@@ -235,7 +221,6 @@ A matriz a seguir demonstra a rastreabilidade entre as User Stories, os Critéri
 | **US 05** | Feedback imediato | `Cenário: Feedback após interação` |
 
 #### Casos de Teste
-
 Os cenários abaixo são exemplos detalhados de testes, escritos em Gherkin.
 
 #### **User Story 01: Upload e Análise de Documentos**
@@ -273,7 +258,6 @@ Os cenários abaixo são exemplos detalhados de testes, escritos em Gherkin.
 `Então o tempo total de processamento não deve exceder 30 segundos`
 
 #### Critérios de Entrada e Saída
-
 * **Critérios de Entrada (Entry Criteria)**:
     * Todas as User Stories e seus Critérios de Aceitação devem estar finalizados e aprovados.
     * A versão do software para testes (build) deve ter sido entregue e instalada no ambiente de testes.
@@ -285,7 +269,6 @@ Os cenários abaixo são exemplos detalhados de testes, escritos em Gherkin.
     * A documentação dos resultados de todos os testes está completa e foi revisada.
 
 #### Ferramentas e Ambiente
-
 * **Ambiente de Testes**: Um ambiente de QA dedicado, separado do ambiente de desenvolvimento e produção.
 * **Ferramentas de Gestão**: Jira, Trello ou similar para rastreamento de User Stories e gestão de defeitos.
 * **Automação de Testes**: A ser definido. Pode ser utilizado o **Robot Framework** com a **SeleniumLibrary** para a automação dos cenários BDD.
@@ -293,10 +276,9 @@ Os cenários abaixo são exemplos detalhados de testes, escritos em Gherkin.
 * **Ferramentas de Segurança**: Ferramentas de análise de vulnerabilidade (SAST/DAST) para verificação de código e tempo de execução.
 
 ## 2\. Arquitetura do Sistema
-
 ### 2.1. Visão Arquitetural
-
-A arquitetura do ImpulsAI, em sua versão atual, adota um padrão monolítico. Esta abordagem concentra todas as funcionalidades do sistema em uma única aplicação, o que simplifica o desenvolvimento e a implantação inicial. O projeto é estruturado em torno de um servidor Express.js central, que hospeda todos os endpoints da API, e um conjunto de serviços modulares que coexistem no mesmo processo.
+---
+A arquitetura do ImpulsAI, em sua versão atual, adota um padrão Cliente-Serviço com back-end desacoplado. Esta abordagem concentra a maioria das funcionalidades do sistema em uma única aplicação, o que simplifica o desenvolvimento e a implantação inicial. A aplicação consome dados de uma API externa para web-scrapping e retorna como resultado da análise. O projeto é estruturado em torno de um servidor Express.js central, que hospeda todos os endpoints da API, e um conjunto de serviços modulares que coexistem no mesmo processo.
 
 A aplicação front-end, construída em React, está integrada e se comunica diretamente com o backend via requisições HTTP. Para persistência de dados de forma simplificada, o sistema utiliza arquivos JSON estáticos para armazenar informações como vagas de emprego e cursos.
 
@@ -321,9 +303,8 @@ A aplicação front-end, construída em React, está integrada e se comunica dir
 ```
 
 ### 2.2. Fluxo de Dados e Processos
-
+---
 #### 2.2.1. Fluxo do Usuário (User Flow)
-
 Este diagrama detalha a jornada do usuário na funcionalidade principal do ImpulsAI: a otimização de currículos e a geração do guia de preparação. O fluxo ilustra cada passo, desde a entrada de dados até a visualização do resultado final.
 
 ```mermaid
@@ -348,7 +329,6 @@ Este diagrama detalha a jornada do usuário na funcionalidade principal do Impul
 6.  Ao final da jornada, o usuário pode salvar as informações e encerrar a sessão.
 
 ### 2.2.2. Fluxo de Dados (Data Flow)
-
 Este diagrama descreve como a informação se move entre os principais componentes da arquitetura do ImpulsAI. O fluxo ilustra o caminho dos dados, desde a submissão pelo usuário até o armazenamento e o retorno para a interface.
 
 ```mermaid
@@ -374,9 +354,8 @@ Este diagrama descreve como a informação se move entre os principais component
 6.  Finalmente, o **Backend** envia os **resultados da análise** de volta para o **Frontend**, que exibe as informações para o **Usuário**.
 
 ## 3\. Detalhes Técnicos e de Implementação
-
 ### 3.1. Tecnologias e Dependências
-
+---
 Esta seção lista as principais tecnologias, frameworks e bibliotecas utilizadas no desenvolvimento do projeto ImpulsAI.
 
   * **Linguagens de Programação:** JavaScript (ES6+) e Python 3.x (para serviços de IA, se aplicável)
@@ -391,93 +370,15 @@ Esta seção lista as principais tecnologias, frameworks e bibliotecas utilizada
       * `react-router-dom`: Para gerenciamento de rotas;
       * `react-icons` ou similar: Para ícones.
 
-### 3.2. Configuração e Ambiente
-
-#### 3.2.1. Pré-requisitos
-
-* Node.js: A versão 18.x ou superior constitui um pré-requisito para a operação dos componentes de backend e frontend.
-
-* npm: Fornecido com a instalação do Node.js, é empregado para a gestão das dependências do projeto.
-
-* Editor de código: Recomenda-se enfaticamente a utilização de um ambiente de desenvolvimento integrado (IDE) robusto, como o Visual Studio Code, para otimizar o fluxo de trabalho de codificação.
-
-#### 3.2.2. Instalação
-
-* **Clonagem do Repositório:** O processo é iniciado com o acesso ao terminal e a execução do comando de clonagem do repositório Git, seguido pela navegação para o diretório do projeto:
-
-```
-git clone https://github.com/seu-usuario/impulsa-ai.git
-cd impulsa-ai
-```
-
-* **Instalação das Dependências do Backend:** No diretório do backend, procede-se à instalação das dependências necessárias para o servidor:
-```
-cd backend
-npm install
-```
-
-* **Instalação das Dependências do Frontend:** Após a conclusão do passo anterior, retorne ao diretório raiz, navegue para o diretório do frontend e realize a instalação das dependências da interface:
-```
-cd ../frontend
-npm install
-```
-
-* **Configuração do Ambiente:** A configuração do ambiente requer a criação de um arquivo de configuração .env no diretório do backend e a inserção da chave da API do Gemini, conforme o formato especificado:
-```
-API_GEMINI_KEY=sua_chave_aqui
-```
-
-#### 3.2.3. Instruções de Execução do Projeto
-
-* **Inicialização do Servidor de Backend:** No diretório correspondente ao backend, execute o comando para iniciar o servidor:
-```
-cd backend
-npm start
-```
-
-O servidor estará acessível no endereço http://localhost:3001.
-
-* **Inicialização da Aplicação de Frontend:** Em uma nova instância de terminal, navegue até o diretório do frontend e execute o comando para iniciar a aplicação:
-```
-cd frontend
-npm start
-```
-
-A interface da aplicação será automaticamente carregada no endereço http://localhost:3000 no navegador padrão.
-
 ## 4\. Deploy e Operação
 
 ### 4.1. Ambiente de Produção
+---
 #### 4.1.1. Infraestrutura
-
-* **Plataforma de Hospedagem:**
-
-* **Servidor Web:**
-
-* **Ferramentas de CI/CD:** Não se aplica na versão atual. O deploy é realizado manualmente.
-
-#### 4.1.2. Passos do Deploy
-O processo de deploy para a arquitetura monolítica é realizado de forma manual, seguindo os passos abaixo:
-
-**1. Build do Frontend:** Na pasta do frontend, execute o comando para gerar a versão otimizada da aplicação.
-```
-npm run build
-```
-
-**2. Sincronização dos Arquivos:** Copie a pasta build do frontend e todo o diretório do backend para o servidor de produção, utilizando ferramentas como scp ou rsync.
-
-**3. Instalação das Dependências:** No servidor de produção, navegue até o diretório do backend e instale as dependências.
-```
-npm install
-```
-
-**4. Inicialização do Servidor:** Inicie o servidor do backend em segundo plano, utilizando uma ferramenta como o pm2 para garantir que a aplicação continue rodando em caso de falha.
-```
-pm2 start server.js
-```
+* **Ferramentas de CI/CD:** Os pipalines de CI/CD foram implementados apenas na API.
 
 ### 4.2. Monitoramento e Logs
-
+---
 * **Ferramentas de Monitoramento:** Não se aplica na versão atual. O monitoramento de um protótipo é frequentemente realizado de forma reativa, sem ferramentas dedicadas.
 
 * **Armazenamento de Logs:** Os logs de erros e de acesso são armazenados diretamente no servidor de produção, geralmente em arquivos de texto gerados pela própria aplicação ou pelo servidor de proxy reverso (Nginx).
